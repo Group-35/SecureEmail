@@ -65,8 +65,7 @@
       <p>Ryan Patrick 
       </font></td>
     <td width="42%" valign="TOP"> 
-      <p><font size="2">&lt;put comment to summarize the changes made in this 
-        version&gt;</font></p>
+      <p><font size="2">Initial Concept of Operations document</font></p>
     </td>
   </tr>
   <tr> 
@@ -90,7 +89,7 @@
 
 <FONT SIZE=2><P>&nbsp;</P>
 
-<P>Team Name: &lt;your team name here&gt;</P>
+<P>Team Name: Encrypted Email</P>
 
 <P>Team Members:</P>
 
@@ -98,16 +97,16 @@
 
 <UL>
 
-  <LI>Ryan Patrick | ryanxanpat@knights.ucf.edu
-  </LI>
+<LI>Ryan Patrick | ryanxanpat@knights.ucf.edu
+</LI>
 
-  <LI>Alex Chatham | 
-  </LI>
+<LI>Alex Chatham | achatham@knights.ucf.edu
+</LI>
 
 <LI>Thomas Tavarez | peepq@knights.ucf.edu
 </LI>
 
-<LI>David Clapp | 
+<LI>David Clapp | davidclapp@knights.ucf.edu
 </LI>
 
 </UL>
@@ -144,33 +143,79 @@
 
 <B><P><A NAME="CurrentSystem">The Current System</A></P>
 
-</B><P>&lt;brief description: 1 or 2 paragraphs&gt;</P>
+</B><P>The current system design is an encrypted email system through a web browser based interface. Messages will be encrypted end-to-end so that they can only be read by the designated reciever. Unregistered users will be able to register a new account.  Registered users can login, send/recieve messages and manage their messages.</P>
 
 <P>&nbsp;</P>
 
 <B><P><A NAME="Needs">The Proposed System: Needs</A></P>
 
-</B><P>&lt;list or narrative description of the needs for a new or modified system. 1 paragraph to 1 page&gt;</P>
+</B><P>
+<UL>
+
+<LI>End to end encryption of messages</LI>
+<LI>Organization of messages</LI>
+<LI>Marking Spam</LI>
+<LI>Finding unread messages</LI>
+<LI>Interface to send, receive and manage messages</LI>
+<LI>Server to handle sending/receiving of messages</LI>
+
+</UL>
+</P>
 
 <P>&nbsp;</P>
 
 <B><P><A NAME="UsersAndModes">The Proposed System: Users and Modes of Operation</A></P>
 
-</B><P>&lt;Brief (1 - 3 sentences each) description of each class of user and each mode of operation for the proposed system&gt;</P>
+</B><P>The proposed system will have two types of users (admins and standard users). Standard users can send and receive messages.  Admins can manage users and the site as well as sending/receiving messages.  The proposed system will have two modes of operation (authenticated and non-authenticated). When in the authenticated mode, users can send/recieve messages as well as viewing and managing older messages. In non-authenticated mode, users can either register or login in (to switch to authenticated mode).</P>
 
 <P>&nbsp;</P>
 
 <B><P><A NAME="OperationalScenarios">The Proposed System: Operational Scenarios</A></P>
 
-</B><P>&lt;Brief (1 paragraph each) description of the major operational scenarios for the proposed system. Include typical scenarios and a few atypical scenarios (errors, high risk situations, etc.)&gt;</P>
+</B><P>
+
+<UL>
+<LI>Create New User - An un-authenticated user registers for an account. Basic information is collected on them (desired username, pw, etc.) Basic password requirements check is caried out as well as checking to make sure the username doesn't already exist. If requirements are met, their account is created and they are logged in.</LI>
+<LI>Login - A registered un-authenticated user logs into the website using their username and password. If they provide the correct information, they are authenticated and redirected to their inbox.</LI>
+<LI>Send Message - An authenticated user wishes to send a message to another user.  The message is encryped before it is sent.</LI>
+<LI>Read Message - An authenticated user wishes to read a message recieved from another user. The message must be decrypted before it is readable by the user.</LI>
+<LI>Logout - An authenticated user wishes to logout. Their active session is ended and they must login again to send/recieve messages.
+</UL>
+
+
+</P>
 
 <P>&nbsp;</P>
 
 <B><P><A NAME="OperationalFeatures">The Proposed System: Operational Features</A></P>
 
-</B><P>Must Have: &lt;list of these features, in priority order&gt;</P>
+</B><P>
 
-<P>Would Like to Have: &lt;list of these features, in priority order&gt;</P><DIR>
+Must Have:
+
+<UL>
+<LI>End to end encryption of messages</LI>
+<LI>Ability to send messages to more than one user</LI>
+<LI>Ability to send/recieve messages</LI>
+<LI>Ability to manage messages (delete, sorting, etc.)</LI>
+<LI>Browser based interface</LI>
+<LI>Ability to create new user</LI>
+<LI>Ability to authenticate registered users</LI>
+</UL>
+
+</P>
+
+<P>Would Like to Have: 
+
+<UL>
+<LI>Sorting of messages based on various fields</LI>
+<LI>Spam filter</LI>
+<LI>Mobile based app (Android)</LI>
+<LI>Password reset</LI>
+<LI>Ability to search messages</LI>
+</UL>
+
+</P><DIR>
 
 <DIR>
 
@@ -184,19 +229,47 @@
 
 <B><P><A NAME="ExpectedImpacts">The Proposed System: Expected Impacts</A></P>
 
-</B><P>&lt;Brief (1-2 paragraph) description of the expected impacts of the proposed system development and implementation&gt;</P>
+</B><P>The expected impact is that users using our system will be able to communicate over email securely via end to end encryption.</P>
 
 <P>&nbsp;</P>
 
 <B><P><A NAME="Analysis">The Proposed System: Analysis</A></P>
 
-</B><P>Expected Improvements: &lt;list them&gt;</P>
+</B><P>Expected Improvements: 
 
-<P>Disadvantages: &lt;list them&gt;</P>
+<UL>
+<LI>Implementation of must haves</LI>
+<LI>Android App Interface</LI>
+</UL>
 
-<P>Limitations: &lt;list them&gt;</P>
+</P>
 
-<P>Risks: &lt;list them&gt;</P>
+<P>Disadvantages: 
+
+<UL>
+<LI>No Spam Filter</LI>
+<LI>Encryption can be clunky and some users may have some dificulty using it</LI>
+</UL>
+
+</P>
+
+<P>Limitations: 
+
+<UL>
+<LI>No way to attach files to messages</LI>
+<LI>The current system only provides means to encrypt plain text, there is no way to embed formatting into messages</LI>
+</UL>
+
+</P>
+
+<P>Risks: 
+
+<UL>
+<LI>If messages aren't properly enrypted, they could be intercepted and read by someone who isn't the intended reciever</LI>
+<LI>The web server runs the risk of being hacked, which could lead to user data being leaked</LI>
+</UL>
+
+</P>
 
 
 </FONT>
