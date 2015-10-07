@@ -1,0 +1,785 @@
+<html><head><HTML>
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+
+<TITLE>SRS</TITLE>
+
+<META NAME="SRS" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+
+</HEAD>
+
+<BODY LINK="#0000ff" VLINK="#800080">
+<B><FONT SIZE=5> 
+<P ALIGN="CENTER"><b><font size="2">Encrypted Email</font></b></P>
+</FONT></B>
+<p align="CENTER"><b><font size="2">Software Requirements Specification</font></b></p>
+<p align="CENTER"><b><font size="2">COP4331, Fall 2015</font></b></p>
+<p align="CENTER">&nbsp;</p>
+</font></B><FONT SIZE=2><P>Modification history: </P></FONT>
+
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=711>
+  <TR> 
+    <TD WIDTH="15%" VALIGN="TOP"> 
+      <P><FONT SIZE=2>Version</FONT>
+    </TD>
+    <TD WIDTH="18%" VALIGN="TOP"> <FONT SIZE=2> 
+      <P>Date
+      </FONT></TD>
+    <TD WIDTH="25%" VALIGN="TOP"> <FONT SIZE=2> 
+      <P>Who
+      </FONT></TD>
+    <TD WIDTH="42%" VALIGN="TOP"> <FONT SIZE=2> 
+      <P>Comment
+      </FONT></TD>
+  </TR>
+  <tr> 
+    <td width="15%" valign="TOP"> <font size=2> 
+      <p>v0.0 
+      </font></td>
+    <td width="18%" valign="TOP"> <font size=2> 
+      <p>08/15/00 
+      </font></td>
+    <td width="25%" valign="TOP"> <font size=2> 
+      <p>G. H. Walton
+      </font></td>
+    <td width="42%" valign="TOP"> <font size=2> 
+      <p>Template
+      </font></td>
+  </tr>
+  <tr> 
+    <td width="15%" valign="TOP"> <font size=2> 
+      <p>v1.0 
+      </font></td>
+    <td width="18%" valign="TOP"> <font size=2> 
+      <p>110/08/2015 
+      </font></td>
+    <td width="25%" valign="TOP"> <font size=2> 
+      <p>David Clapp 
+      </font></td>
+    <td width="42%" valign="TOP"> 
+      <p><font size="2">Initial Project Document Standard</font></p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="15%" valign="TOP"> <font size=2> 
+      <p>...
+      </font></td>
+    <td width="18%" valign="TOP"> <font size=2> 
+      <p>&nbsp;
+      </font></td>
+    <td width="25%" valign="TOP"> <font size=2> 
+      <p>&nbsp;
+      </font></td>
+    <td width="42%" valign="TOP"> 
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+</TABLE>
+
+
+
+<FONT SIZE=2><P>&nbsp;</P>
+
+<P>Team Name: Encrypted Email;</P>
+
+<P>Team Members:</P>
+
+
+
+<UL>
+
+<LI>Ryan Patrick | ryanxanpat@knights.ucf.edu
+</LI>
+
+<LI>Alex Chatham | achatham@knights.ucf.edu
+</LI>
+
+<LI>Thomas Tavarez | peepq@knights.ucf.edu
+</LI>
+
+<LI>David Clapp | davidclapp@knights.ucf.edu
+</LI>
+
+</UL>
+
+
+
+
+</font><p></p><hr align="LEFT" width="90%"><p></p>
+
+<font size="2"><p align="CENTER">Contents of this Document</p></font><dir><font size="2">
+
+
+
+</font><p><a href="#Introduction"><font size="2">Introduction</font></a></p></dir>
+
+
+
+
+
+<ul>
+
+
+
+<ul>
+
+<li><a href="#SoftwareToBeProduced"><font size="2">Software to be Produced</font></a> </li>
+
+<li><a href="#ReferenceDocuments"><font size="2">Reference Documents</font></a> </li>
+
+<li><a href="#ApplicableStandards"><font size="2">Applicable Standards</font></a></li></ul>
+
+</ul>
+
+<dir>
+
+
+
+<p><a href="#DefinitionsAcronymsAbbreviations"><font size="2">Definition, Acronyms, and Abbreviations</font></a></p>
+
+<p><a href="#ProductOverview"><font size="2">Product Overview</font></a></p></dir>
+
+
+
+
+
+<ul>
+
+
+
+<ul>
+
+<li><a href="#Assumptions"><font size="2">Assumptions</font></a> </li>
+
+<li><a href="#StakeHolders"><font size="2">Stakeholders</font></a> </li>
+
+<li><a href="#EventTable"><font size="2">Event Table</font></a> </li>
+
+<li><a href="#UseCaseDiagram"><font size="2">Use Case Diagram</font></a> </li>
+
+<li><a href="#UseCaseDescriptions"><font size="2">Use Case Descriptions</font></a></li></ul>
+
+</ul>
+
+<dir>
+
+
+
+<p><a href="#SpecificRequirements"><font size="2">Specific Requirements</font></a></p></dir>
+
+
+
+
+
+<ul>
+
+
+
+<ul>
+
+<li><a href="#FunctionalRequirements"><font size="2">Functional Requirements</font></a> </li>
+
+<li><a href="#InterfaceRequirements"><font size="2">Interface Requirements</font></a> </li>
+
+<li><a href="#PhysicalEnvironmentRequirements"><font size="2">Physical Environment Requirements</font></a> </li>
+
+<li><a href="#UsersHumanFactorsRequirements"><font size="2">Users and Human Factors Requirements</font></a> </li>
+
+<li><a href="#DocumentationRequirements"><font size="2">Documentation Requirements</font></a> </li>
+
+<li><a href="#DataRequirements"><font size="2">Data Requirements</font></a> </li>
+
+<li><a href="#ResourceRequirements"><font size="2">Resource Requirements</font></a> </li>
+
+<li><a href="#SecurityRequirements"><font size="2">Security Requirements</font></a> </li>
+
+<li><a href="#QualityAssuranceRequirements"><font size="2">Quality Assurance Requirements</font></a></li></ul>
+
+</ul>
+
+<dir>
+
+
+
+<p><a href="#SupportingMaterials"><font size="2">Supporting Material</font></a></p></dir>
+
+
+
+<p></p><hr><p></p>
+
+<font size="2"><p><a name="Introduction">SECTION 1: Introduction</a></p>
+
+<u><p><a name="SoftwareToBeProduced">Software to be Produced:</a></p>
+
+
+
+</u><ul><u>
+
+</u><li>&lt;one paragraph to identify the software produced(s) to be 
+produced.. Refer the reader to the reference documents for more 
+information&gt;</li></ul>
+
+
+
+<u><p><a name="ReferenceDocuments">Reference Documents:</a></p>
+
+
+
+</u><ul><u>
+
+</u><li>Concept of Operations &lt;include link here&gt; </li>
+
+<li>Project Plan &lt;include link here&gt; </li>
+
+<li>&lt;any other relevant documents; include full reference information or link&gt;</li></ul>
+
+
+
+<u><p><a name="ApplicableStandards">Applicable Standards:</a></p>
+
+
+
+</u><ul><u>
+
+</u>
+  <li>&lt;You do not have to repeat the standards included in the project plan. 
+    This is where you cite any standards that are specific to the system requirements.&gt;</li>
+
+  </ul>
+
+
+
+<p>&nbsp;<a name="DefinitionsAcronymsAbbreviations"></a><u>Definitions, Acronyms, and Abbreviations:</u></p><ul>
+
+
+
+<u>
+
+</u><li>&lt;include any that are needed to read this document (or "None"
+ if document is self-explanatory and no acronyms or abbreviations will 
+be used&gt;</li></ul>
+
+
+
+</font><p></p><hr><p></p>
+
+<font size="2"><p>SECTION 2: <a name="ProductOverview">Product Overview</a></p>
+
+<u><p><a name="Assumptions">Assumptions:</a></p>
+
+
+
+</u><ul><u>
+
+</u><li>&lt;List all the assumptions the developers are making. For 
+example: assumptions about other systems this product will interface 
+with; assumptions about the technological environment in which the 
+product will operate (how much memory, what type of processor, ...); 
+assumptions about availability and capability of COTS, GOTS, or other 
+re-used products, ...&gt; </li>
+
+<li>...</li></ul>
+
+
+
+<u><p><a name="StakeHolders">Stakeholders:</a></p>
+
+
+
+</u><ul><u>
+
+</u><li>&lt;A stakeholder is anyone who has an interest in the software 
+to be developed. For example, the customer, the various classes of 
+users, applicable regulatory agencies, ... List each category of 
+stakeholder and give a phrase or a sentence to describe their interest 
+or concerns&gt;</li></ul>
+
+
+
+<u><p><a name="EventTable">Event Table</a>:</p>
+
+
+
+</u><ul><u>
+
+</u><li>&lt;An event table identifies all the external events to which 
+the software must respond. This is a first step in determining the 
+required overall system functionality. The event list should be 
+consistent with the context diagram and the interest of each 
+stakeholder. Make sure that exceptions are considered.&gt; </li>
+
+<li>&lt;Use the following table format:&gt;</li></ul>
+
+</font>
+
+<table border="" bordercolor="#000000" cellpadding="7" cellspacing="1" width="715">
+
+<tbody><tr><td valign="TOP" width="24%">
+
+<p><font size="2">Event Name</font></p></td>
+
+<td valign="TOP" width="22%">
+
+<font size="2"></font><p><font size="2">External Stimuli</font></p></td>
+
+<td valign="TOP" width="27%">
+
+<font size="2"></font><p><font size="2">External Responses</font></p></td>
+
+<td valign="TOP" width="28%">
+
+<font size="2"></font><p><font size="2">Internal data and state</font></p></td>
+
+</tr>
+
+<tr><td valign="TOP" width="24%">
+
+<font size="2"></font><p><font size="2">&nbsp;</font></p></td>
+
+<td valign="TOP" width="22%">
+
+<font size="2"></font><p><font size="2">&nbsp;</font></p></td>
+
+<td valign="TOP" width="27%">
+
+<font size="2"></font><p><font size="2">&nbsp;</font></p></td>
+
+<td valign="TOP" width="28%">
+
+<font size="2"></font><p><font size="2">&nbsp;</font></p></td>
+
+</tr>
+
+<tr><td valign="TOP" width="24%">
+
+<font size="2"></font><p><font size="2">&nbsp;</font></p></td>
+
+<td valign="TOP" width="22%">
+
+<font size="2"></font><p><font size="2">&nbsp;</font></p></td>
+
+<td valign="TOP" width="27%">
+
+<font size="2"></font><p><font size="2">&nbsp;</font></p></td>
+
+<td valign="TOP" width="28%">
+
+<font size="2"></font><p><font size="2">&nbsp;</font></p></td>
+
+</tr>
+
+<tr><td valign="TOP" width="24%">
+
+<font size="2"></font><p><font size="2">&nbsp;</font></p></td>
+
+<td valign="TOP" width="22%">
+
+<font size="2"></font><p><font size="2">&nbsp;</font></p></td>
+
+<td valign="TOP" width="27%">
+
+<font size="2"></font><p><font size="2">&nbsp;</font></p></td>
+
+<td valign="TOP" width="28%">
+
+<font size="2"></font><p><font size="2">&nbsp;</font></p></td>
+
+</tr>
+
+</tbody></table>
+
+
+
+<font size="2"><p>&nbsp;</p>
+
+<u><p><a name="UseCaseDiagram">Use Case Diagram:</a></p>
+
+
+
+</u><ul><u>
+
+</u>
+  <li>&lt;Include a use case diagram here. It should be consistent with all the 
+    above work For reference, see materials presented in class.Your text also 
+    has a little information.&gt;</li>
+</ul>
+
+
+
+<u><p><a name="UseCaseDescriptions">Use Case Descriptions:</a></p>
+
+
+
+</u><ul><u>
+
+</u>
+  <li>&lt;Briefly describe each use case included in the above diagram. Make sure 
+    that exceptions are considered. For reference, see materials presented in 
+    class. class.Your text also has a little information &gt;</li>
+</ul>
+
+
+
+</font><p></p><hr><p></p>
+
+<font size="2"><p><a name="SpecificRequirements">SECTION 3: Specific Requirements</a></p><dir>
+
+<dir>
+
+
+
+<p>&lt;The following template must be used for <u>each</u> requirement: &gt;</p></dir>
+
+</dir>
+
+</font>
+
+<table border="" bordercolor="#000000" cellpadding="7" cellspacing="1" width="638">
+
+<tbody><tr><td valign="TOP">
+
+<p><font size="2">No: &lt;unique requirement number&gt;</font></p></td>
+
+</tr>
+
+<tr><td valign="TOP">
+
+<font size="2"></font><p><font size="2">Statement: &lt;the "shall" statement of the requirement&gt;</font></p></td>
+
+</tr>
+
+<tr><td valign="TOP">
+
+<font size="2"></font><p><font size="2">Source: &lt;source of the requirement&gt;</font></p></td>
+
+</tr>
+
+<tr><td valign="TOP">
+
+<font size="2"></font><p><font size="2">Dependency: &lt;list (with link)
+ to each other requirement on which satisfaction of this requirement 
+depends. (May be "None")&gt;</font></p></td>
+
+</tr>
+
+<tr><td valign="TOP">
+
+<font size="2"></font><p><font size="2">Conflicts: &lt;list (with link) to each other requirements with which this requirement conflicts. (May be "None")&gt;</font></p></td>
+
+</tr>
+
+<tr><td valign="TOP">
+
+<font size="2"></font><p><font size="2">Supporting Materials: &lt;list (with link) to supporting diagrams, lists, memos, etc.&gt;</font></p></td>
+
+</tr>
+
+<tr><td valign="TOP">
+
+<font size="2"></font><p><font size="2">Evaluation Method: &lt;How can you tell if the completed system satisfies this requirement? &gt;</font></p></td>
+
+</tr>
+
+<tr><td valign="TOP">
+
+<font size="2"></font><p><font size="2">Revision History: &lt;who, when, what&gt;</font></p></td>
+
+</tr>
+
+</tbody></table>
+
+
+
+<font size="2"><p>&nbsp;</p>
+
+<p><a name="FunctionalRequirements"><u>3.1 Functional Requirements</u>:</a></p>
+
+
+
+<ul>
+
+<li>&lt; Describe the fundamental <u>actions</u> that the software must 
+perform. Functional requirements can be partitioned into subfunctions or
+ subprocesses. Note: the software design partition does not have to 
+correspond with the functional requirements partition. Functional 
+requirements include: </li>
+
+
+
+<ul>
+
+<li>validity checks on the inputs, </li>
+
+<li>exact sequence of operations, </li>
+
+<li>responses to abnormal situations, including: overflow, communication facilities, and error handling and recovery </li>
+
+<li>effect of parameters </li>
+
+<li>relationship of outputs to inputs, including: input/output sequences, formulas for input to output conversion </li>
+
+<li>...&gt;</li></ul>
+
+</ul>
+
+
+
+<u><p>&nbsp;</p>
+
+<p><a name="InterfaceRequirements">3.2 Interface Requirements:</a></p>
+
+
+
+</u><ul><u>
+
+</u><li>&lt; Describe the interactions of the software with other 
+entities. Interface requirements include a precise description of the 
+protocol for each interface: </li>
+
+
+
+<ul>
+
+<li>what data items are input </li>
+
+<li>what data items are output </li>
+
+<li>what is the data type, the format, and the possible range of values 
+for each data item? (i.e. what is the "domain" of this data item?) </li>
+
+<li>how accurate must each data item be?</li>
+
+<li>how often will each data item be received or sent? </li>
+
+<li>timing issues (synchronous/asynchronous)&gt; </li>
+
+<li>how many will be received or sent in a particular time period? </li>
+
+<li>how accurate must the data be? </li>
+
+<li>...&gt;</li></ul>
+
+</ul>
+
+
+
+<u><p><a name="PhysicalEnvironmentRequirements">3.3Physical Environment Requirements:</a></p>
+
+
+
+</u><ul><u>
+
+</u><li>&lt; Describe the environment in which the software must run. Physical environment requirements include: </li>
+
+
+
+<ul>
+
+<li>type of equipment on which the software must run </li>
+
+<li>location of the equipment </li>
+
+<li>environmental considerations: temperature, humidity, ... </li>
+
+<li>...&gt;</li></ul>
+
+</ul>
+
+
+
+<p>&nbsp;</p>
+
+<u><p><a name="UsersHumanFactorsRequirements">3.4 Users and Human Factors Requirements:</a></p>
+
+
+
+</u><ul><u>
+
+</u><li>&lt;Describe the users and their constraints: </li>
+
+
+
+<ul>
+
+<li>What different types of users must the system support? </li>
+
+<li>What is the skill level of each type of user? What type of training and documentation must be provided for each user? </li>
+
+<li>Do any users require special accommodations (large font size, ...) </li>
+
+<li>Must the system detect and prevent misuse? If so, what types of potential misuse must the system detect and prevent? </li>
+
+<li>...&gt;</li></ul>
+
+</ul>
+
+
+
+<p>&nbsp;</p>
+
+<u><p><a name="DocumentationRequirements">3.5 Documentation Requirements:</a></p>
+
+
+
+</u><ul><u>
+
+</u><li>&lt;Describe what documentation is required: </li>
+
+
+
+<ul>
+
+<li>on-line, printed, or both? </li>
+
+<li>what is the assumed skill level of the audience of each component of documentation? </li>
+
+<li>...&gt;</li></ul>
+
+</ul>
+
+
+
+<u><p><a name="DataRequirements">3.6 Data Requirements:</a></p>
+
+
+
+</u><ul><u>
+
+</u><li>&lt;Describe any data calculations: what formula will be used? to what degree of precision must the calculations be made? &gt;</li>
+
+<li>&lt;Describe any retained data requirements: exactly what must be retained? </li>
+
+<li>...&gt;</li></ul>
+
+
+
+<u><p><a name="ResourceRequirements">3.7 Resource Requirements:</a></p>
+
+
+
+</u><ul><u>
+
+</u><li>&lt;Describe the system resources: </li>
+
+
+
+<ul>
+
+<li>skilled personnel required to build, use, and maintain the system? </li>
+
+<li>physical space, power, heating, air conditioning, ...? </li>
+
+<li>schedule? </li>
+
+<li>funding? </li>
+
+<li>hardware/software/tools? </li>
+
+<li>...&gt;</li></ul>
+
+</ul>
+
+
+
+<u><p><a name="SecurityRequirements">3.8 Security Requirements:</a></p>
+
+
+
+</u><ul><u>
+
+</u><li>&lt;Describe any security requirements: </li>
+
+
+
+<ul>
+
+<li>must access to the system or information be controlled? </li>
+
+<li>must one user's data be isolated from others? </li>
+
+<li>how will user programs be isolated from other programs and from the operating system? </li>
+
+<li>how often will the system be backed up? </li>
+
+<li>must the backup copies be stored at a different location? </li>
+
+<li>should precautions be taken against fire, water damage, theft, ...? </li>
+
+<li>what are the recovery requirements? </li>
+
+<li>...&gt;</li></ul>
+
+</ul>
+
+
+
+<p>&nbsp;</p>
+
+<u><p><a name="QualityAssuranceRequirements">3.9 Quality Assurance Requirements:</a></p>
+
+
+
+</u><ul><u>
+
+</u><li>&lt;Describe quality attributes: </li>
+
+
+
+<ul>
+
+<li>What are the requirements for reliability, availability, maintainability, security, portability ...? </li>
+
+<li>How must these quality attributes be demonstrated? </li>
+
+<li>Must the system detect and isolate faults? If so, what types of faults? </li>
+
+<li>Is there a prescribed mean time between failures? </li>
+
+<li>Is there a prescribed time the system must be available? </li>
+
+<li>Is there a maximum time allowed for restarting the system after a failure? </li>
+
+<li>What are the requirements for resource usage and response times? </li>
+
+<li>...&gt;</li></ul>
+
+</ul>
+
+
+
+<p>&nbsp;</p>
+
+<u><p><a name="SupportingMaterials">SECTION 4: Supporting Material</a></p>
+
+</u><ul><u>
+
+</u> <li>&lt;Here is where you put all your analysis work from which you
+ derived the above requirements. It may include UML or other diagrams, 
+notes, memos, etc.)</li></ul>
+
+
+
+
+
+</font><p></p><hr><p></p>
+<dir> 
+  <dir> 
+    <dir> 
+      <p align="CENTER"><font size="2">Template created by G. Walton (</font><a href="mailto:GWalton@mail.ucf.edu"><font size="2">GWalton@mail.ucf.edu</font></a><font size="2">) 
+        on Aug 30, 1999 and last updated Aug 15, 2000</font></p>
+      <p align="CENTER"><font size="2">This page last modified by David Clapp (DavidClapp@knights.ucf.edu) </font><font size="2">) 
+        on Oct 08 2015</font></p>
+    </dir>
+  </dir>
+</dir>
+
+
+
+
+
+</body></html>
