@@ -149,13 +149,41 @@
   Test Cases</A></font></P>
 <UL>
 
-  <LI><font size="2">Test Objective: Email sent/recieve verified </font></LI>
+  <LI><font size="2">Test Objective: Email sent verified </font></LI>
   <ul>
-    <LI><font size="2">Test Description: Test the ability to send and recieve emails from other users. The testing values will be the email object. This includes the to, from, and other email data.</font></LI>
+    <LI><font size="2">Test Description: Test the ability to send emails from other users. The testing values will be the email object. This includes the to, from, and other email data.</font></LI>
     <LI><font size="2">Test Conditions: See Test Environment. </font></LI>
     <LI><font size="2">Expected Results: The expected result should be an additional value in the email database. The testing suite should also show "green" to notify that the case passed.</font></LI>
   </ul>
-  
+
+  <LI><font size="2">Test Objective: Email recieved verified </font></LI>
+  <ul>
+    <LI><font size="2">Test Description: Test the ability to recieve emails from other users. The testing values will be the email object. This includes the to, from, and other email data.</font></LI>
+    <LI><font size="2">Test Conditions: See Test Environment. </font></LI>
+    <LI><font size="2">Expected Results: The expected result should be that the email 'read' flagged was changed from false to true.</font></LI>
+  </ul>
+
+  <LI><font size="2">Test Objective: User login/logout </font></LI>
+  <ul>
+    <LI><font size="2">Test Description: The user should be able to login and logout of their session.</font></LI>
+    <LI><font size="2">Test Conditions: See Test Environment. </font></LI>
+    <LI><font size="2">Expected Results: The expected result should be the user loggin into the system and logging out by deleting their session. Another user should not be able to access another users data either. </font></LI>
+  </ul>
+
+  <LI><font size="2">Test Objective: Save drafts </font></LI>
+  <ul>
+    <LI><font size="2">Test Description: The user should be able to write and save a draft without sending the email.</font></LI>
+    <LI><font size="2">Test Conditions: See Test Environment. </font></LI>
+    <LI><font size="2">Expected Results: The expected result should be that the draft is saved to the server with no 'to' fields.</font></LI>
+  </ul>
+
+  <LI><font size="2">Test Objective: Secure sessions </font></LI>
+  <ul>
+    <LI><font size="2">Test Description: Another user should not be able to access another user's session by session hijacking. </font></LI>
+    <LI><font size="2">Test Conditions: See Test Environment. </font></LI>
+    <LI><font size="2">Expected Results: The expected result should be a user not being able to access data from another user.</font></LI>
+  </ul>
+
 </UL>
 <P>&nbsp;</P>
 <P>
