@@ -1,0 +1,172 @@
+
+<HTML>
+
+<HEAD>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+
+<TITLE>TestPlanTemplate</TITLE>
+
+<META NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+
+</HEAD>
+
+<BODY LINK="#0000ff" VLINK="#800080">
+<FONT SIZE=4>
+<P ALIGN="CENTER"><b><font size="2">Secure Email</font></b></P>
+</FONT> 
+<p align="CENTER"><font size="2"><b>Test Plan</b></font></p>
+<p align="CENTER"><font size="2"><b>COP 4310, Fall, 2016</b></font></p>
+<p align="CENTER">&nbsp;</p>
+<p><font size="2">Modification history: </font></p>
+<table BORDER cellspacing=1 cellpadding=7 width=711>
+  <tr> 
+    <td width="15%" valign="TOP"> 
+      <p><font size=2>Version</font> 
+    </td>
+    <td width="18%" valign="TOP"> 
+      <p><font size="2">Date </font>
+    </td>
+    <td width="25%" valign="TOP"> 
+      <p><font size="2">Who </font>
+    </td>
+    <td width="42%" valign="TOP"> 
+      <p><font size="2">Comment </font>
+    </td>
+  </tr>
+  <tr> 
+    <td width="15%" valign="TOP"> 
+      <p><font size="2">v0.0 </font>
+    </td>
+    <td width="18%" valign="TOP"> 
+      <p><font size="2">08/15/00 </font>
+    </td>
+    <td width="25%" valign="TOP"> 
+      <p><font size="2">G. H. Walton </font>
+    </td>
+    <td width="42%" valign="TOP"> 
+      <p><font size="2">Template </font>
+    </td>
+  </tr>
+  <tr> 
+    <td width="15%" valign="TOP"> 
+      <p><font size="2">v1.0 </font>
+    </td>
+    <td width="18%" valign="TOP"> 
+      <p><font size="2">10/5/15 </font>
+    </td>
+    <td width="25%" valign="TOP"> 
+      <p><font size="2">Thomas Tavarez </font>
+    </td>
+    <td width="42%" valign="TOP"> 
+      <p><font size="2">Initial Version</font></p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="15%" valign="TOP"> 
+      <p><font size="2">... </font>
+    </td>
+    <td width="18%" valign="TOP"> 
+      <p>&nbsp; 
+    </td>
+    <td width="25%" valign="TOP"> 
+      <p>&nbsp; 
+    </td>
+    <td width="42%" valign="TOP"> 
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><font size="2">Team Name: Group 35</font></p>
+<p><font size="2">Team Members:</p>
+<UL>
+
+<LI>Ryan Patrick | ryanxanpat@knights.ucf.edu
+</LI>
+
+<LI>Alex Chatham | achatham@knights.ucf.edu
+</LI>
+
+<LI>Thomas Tavarez | peepq@knights.ucf.edu
+</LI>
+
+<LI>David Clapp | davidclapp@knights.ucf.edu
+</LI>
+
+</UL></font>
+
+<p>
+<hr align="LEFT" width="90%">
+<p></P>
+<P ALIGN="CENTER"><font size="2">Contents of this Document</font></P>
+<OL>
+  <LI><font size="2">Introduction:</font></LI>
+  <P><font size="2"><A HREF="#OverallObjective">Overall Objective for Software 
+    Test Activity</A></font></P>
+  <P><font size="2"><A HREF="#ReferenceDocuments">Reference Documents</A></font></P>
+  <LI><font size="2"><A HREF="#TestCasesDescription">Description of Test Environment</A></font></LI>
+  <LI><font size="2"><A HREF="#StoppingCriteria">Overall Stopping Criteria</A></font></LI>
+  <LI><font size="2"><A HREF="#TestCasesDescription">Description of Individual 
+    Test Cases</A> </font></LI>
+</OL>
+<P>&nbsp;</P>
+<P>
+<HR>
+<p></P>
+<P><font size="2">SECTION 1: Introduction</font></P>
+<UL>
+  <LI><font size="2"><A NAME="OverallObjective">Overall Objective for Software 
+    Test Activity:</A> </font></LI>
+  <LI><font size="2">The software tests shall enable us to debug and catch potential errors in our program before deploying the application to a live environment. It will also allow us to refactor and optimize our code while ensuring that our application will still run as intended. </font></LI>
+</UL>
+<P><font size="2"><A NAME="ReferenceDocuments">Reference Documents:</A></font></P>
+<UL>
+  <LI><font size="2"><a href="./ConOps.html">Concept of Operations</a></font></LI>
+  <LI><font size="2"><a href="DocumentStandard.html">Document Standard</a></font></LI>
+  <LI><font size="2"><a href="ProjectManagementPlan.html">Project Management Plan</a></font></LI>
+  <LI><font size="2"><a href="SRS.htm">SRS</a></font></LI>
+</UL>
+<P>&nbsp;</P>
+<P>
+<HR>
+<p></P>
+<P><font size="2">SECTION 2: <A NAME="TestEnvironment">Description of Test Environment</A></font></P>
+<P><font size="2">We will use MiniTests to test our server for any potential errors or security flaws. We will run integration and unit tests to ensure everything is working as intended. We will run tests on the server and the front end of our application. The testers will be the developers for the application. The testing environment will be different from the actual production environment. The main differences will be server configurations and database values.</font></P>
+<P>
+<HR>
+<p></P>
+<P><font size="2">SECTION 3: <A NAME="StoppingCriteria">Stopping Criteria</A></font></P>
+<P><font size="2">When an error occurs while testing, we will stop testing and attempt to fix the problem. Once there are no more errors, we will deliver the application. If an error occurs during run time, then we will attempt to replicate the error in the testing environment and fix it. With the nature of the application, it should not take long to find all of the errors when running the testing suite. The developer running the tests will attempt to fix the bugs or put in a ticket for the error if they are not able to fix the problem. Before we develop a feature, we will make tests that it needs to pass. Then we will develop and fix those errors. Once it passed all of the errors then the feature will be ready. Things that are not application pending are cosmetic errors. Any other type of error is a 'fatal error' and we will attempt to fix it before delopyment.
+  </font></P>
+<P>
+<HR>
+<p></P>
+<P><font size="2">SECTION 4: <A NAME="TestCasesDescription">Description of Individual 
+  Test Cases</A></font></P>
+<UL>
+
+  <LI><font size="2">Test Objective: Email sent/recieve verified </font></LI>
+  <ul>
+    <LI><font size="2">Test Description: Test the ability to send and recieve emails from other users. The testing values will be the email object. This includes the to, from, and other email data.</font></LI>
+    <LI><font size="2">Test Conditions: See Test Environment. </font></LI>
+    <LI><font size="2">Expected Results: The expected result should be an additional value in the email database. The testing suite should also show "green" to notify that the case passed.</font></LI>
+  </ul>
+  
+</UL>
+<P>&nbsp;</P>
+<P>
+<HR>
+<p></P>
+<p align="CENTER"><font size=2>Template created by G. Walton (</font><a href="mailto:GWalton@mail.ucf.edu"><font size=2>GWalton@mail.ucf.edu</font></a><font size=2>) 
+  on March 28, 1999 and last modified on August 15, 2000.</font></p>
+<p align="CENTER"><font size=2>This page last modified by &lt;your name here&gt; 
+  (&lt;your e-mail address text and link here&gt; </font><font size=2>) on &lt;modification 
+  date here&gt;</font></p>
+</BODY>
+
+</HTML>
+
