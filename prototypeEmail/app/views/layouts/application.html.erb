@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KaniWani</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body ng-app="ProtoEmail">
+	<div class="container">
+    <div ng-include="'assets/nav/_nav.html'"></div>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: "alert alert-info" %>
+    <% end %>
+    <h1>ProtoEmail</h1>
+    <div class="jumbotron" style="margin-top: 50px;">
+      <ui-view></ui-view>
+    </div>
+
+    <%= debug(params) if Rails.env.development? %>
+
+  </div>
+</body>
+</html>
