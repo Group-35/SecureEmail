@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Decryption Prototype</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <script language="Javascript" src="http://hanewin.net/encrypt/rsa.js" type="text/javascript"></script>
+  <script language="Javascript" src="http://hanewin.net/encrypt/aes-enc.js" type="text/javascript"></script>
+  <script language="Javascript" src="http://hanewin.net/encrypt/base64.js" type="text/javascript"></script>
+  <script language="Javascript" src="http://hanewin.net/encrypt/sha1.js" type="text/javascript"></script>
+  <script language="Javascript" src="http://hanewin.net/encrypt/cast5.js" type="text/javascript"></script>
+
+  <script language="Javascript" type="text/javascript">
+
+    var keytyp = 0;
+    //var keyid = '6e2e0d97ca45ec2e';
+    var msgToDecrypt = '-----BEGIN PGP MESSAGE-----\nVersion: haneWIN JavascriptPG v2.0\n\nhQEMA24uDZfKRewuAQgAwBkSBOy9yw7mLjGabpsC8YuZ1YmcOy2atmGn9ISO\nl6envYsn7fNNAOmHMXIVRFA/gBM080IihWQiwSAiTDWf0fpLxEgoPhwrctal\nRIVlYsP6CIcxpcrZfxzc1D3Nr/gwBrzQyIQk2QSPzwP3gf+fjWI9JLPXbqEF\nJ6rhi8MrYdBV5KIVvdDpC3e6CerltrhHYwOD5p7CoMln/z7ywB2YGnuPiq1B\ntnpMqn0gwB3g3r5nnZD+JPFoP3Oe7+Ir6z7APSu+MhctVNgQVbPAix6uh2vn\nlnDsTNVFUYmya/g+KoRFj/DvL9LP6RKBtfRCTyBIxLOHUcN/y44hY5reKYNx\nI6RCFt0CJxLuoF8CS2KsyQV7uzYtGfSUjKuOBlJAhWez8QumHMD4MV3K8K9X\n4vqRmyrQ+1dnHg3CF0AUbkGA7YTfA/Tv\n=G/5v\n-----END PGP MESSAGE-----';
+
+    var privKey = '-----BEGIN PGP PRIVATE KEY BLOCK-----\nVersion: GnuPG v2\n\n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\npdeGHENTLQw0kaY=\n=w/ja\n-----END PGP PRIVATE KEY BLOCK-----';
+
+    function load()
+    {
+      document.dec_msg.priv_key.value=privKey;
+      document.dec_msg.msg.value=msgToDecrypt;
+    }
+
+    function encrypt()
+    {
+     pubkey=document.dec_msg.pkey.value;
+
+     if(document.dec_msg.keyid.value.length) keyid=document.dec_msg.keyid.value;
+     else                              keyid='0000000000000000';
+     if(keyid.length != 16)
+     {
+       alert('Invalid Key Id');
+       return;
+     }
+
+     var text=document.dec_msg.msg.value+'\r\n';
+     document.dec_msg.msg.value=doEncrypt(keyid, keytyp, pubkey, text);
+    }
+
+  </script>
+
+</head>
+<body ng-app="ProtoEmail" onload="load()">
+  <div class="container">
+    <div ng-include="'assets/nav/_nav.html'"></div>
+    <h1>ProtoEmail</h1>
+    <div class="jumbotron" style="margin-top: 50px;">
+      <ui-view>
+
+          <h2>Decryption Prototype</h2><br>
+
+          <form name="dec_msg" action="javascript:decrypt()">
+
+            <!--
+              Information needed to decrypt message:
+                  - Message to decrypt
+                  - Private key
+                  - Passphrase to decrypt
+          -->
+
+            Type of public key: <select size=1 name="pktype"><option value='RSA'>RSA</option></select><br>
+            <!--  Key ID (figured out from public key): <input size=40 name="keyid"><br>  -->
+
+            Private Key:<br>
+            <textarea name="priv_key" rows=10 cols=80></textarea><br>
+            Message:<br>
+            <textarea name="msg" rows=10 cols=80></textarea><br>
+            Decryption Password: <input type=password size=20 name="passphrase"><br>
+            <input type=submit value="Decrypt">
+
+          </form>
+
+      </ui-view>
+    </div>
+
+  </div>
+</body>
+</html>

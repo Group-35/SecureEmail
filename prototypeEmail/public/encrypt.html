@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Encryption Prototype</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <script language="Javascript" src="http://hanewin.net/encrypt/rsa.js" type="text/javascript"></script>
+  <script language="Javascript" src="http://hanewin.net/encrypt/aes-enc.js" type="text/javascript"></script>
+  <script language="Javascript" src="http://hanewin.net/encrypt/base64.js" type="text/javascript"></script>
+  <script language="Javascript" src="http://hanewin.net/encrypt/mouse.js" type="text/javascript"></script>
+  <script language="Javascript" src="http://hanewin.net/encrypt/PGencode.js" type="text/javascript"></script>
+
+  <script language="Javascript" type="text/javascript">
+
+    var keytyp = 0;
+    var keyid = '6e2e0d97ca45ec2e';
+    var pubkey = 'CADOjrPvWAEuuY/LLyLCUYsFOscu5s7IQXlXiYlSJ6u9j3YGVZ7pI5mQOe8invfVt8gQKJlOMOBjYJQKf9Z8N22XAtFlSHY3JWWoe/YCoEkM1KbYaWn+lOvsxufism4gzOCUtxGT/xZbJnBrBfXh7MAXDeJl2gKoy7JG9wMhcfhOc6IUPlL18mwwWvLDzMCDZ5yFxGKi1d8fYXJ5pjWtRVhPn23jifiqeAUbdYRTvsMPuhxXgoHZFG8cGturTy/JMGRcJndAu0NSrUhUOGFBt3AZiPmmrNu2i4uy0JH+Ib7z+9E6XP2n9Ri1g9xriCI20LKb6wPAPQ5oVqOgf969ghyPABEBAAE=';
+
+    function load()
+    {
+     document.enc_msg.pkey.value=pubkey;
+     document.enc_msg.keyid.value=keyid;
+     if(keytyp == 0) document.enc_msg.pktype.value='RSA';
+     if(keytyp == 1) document.enc_msg.pktype.value='ELGAMAL';
+    }
+
+    function encrypt()
+    {
+     pubkey=document.enc_msg.pkey.value;
+
+     if(document.enc_msg.keyid.value.length) keyid=document.enc_msg.keyid.value;
+     else                              keyid='0000000000000000';
+     if(keyid.length != 16)
+     {
+       alert('Invalid Key Id');
+       return;
+     } 
+     
+     keytyp = -1;
+     if(document.enc_msg.pktype.value == 'ELGAMAL') keytyp = 1;
+     if(document.enc_msg.pktype.value == 'RSA')     keytyp = 0;
+     if(keytyp == -1)
+     {
+       alert('Unsupported Key Type');
+       return;
+     } 
+
+
+     var startTime=new Date();
+
+     var text=document.enc_msg.msg.value+'\r\n';
+     document.enc_msg.msg.value=doEncrypt(keyid, keytyp, pubkey, text);
+
+     var endTime=new Date();
+    }
+
+  </script>
+
+</head>
+<body ng-app="ProtoEmail" onload="load()">
+  <div class="container">
+    <div ng-include="'assets/nav/_nav.html'"></div>
+    <h1>ProtoEmail</h1>
+    <div class="jumbotron" style="margin-top: 50px;">
+      <ui-view>
+
+          <h2>Encryption Prototype</h2><br>
+
+          <!--
+              Information needed from user to encrypt message:
+                  - Who are they sending the message to (user -> public key)
+                  - The message
+
+              Information needed to decrypt message:
+                  - Message to decrypt
+                  - Private key
+                  - Passphrase to decrypt
+          -->
+
+          <form name="enc_msg" action="javascript:encrypt()">
+
+            <!--Info needed-->
+            PUBLIC KEY: <br><br>
+
+            -----BEGIN PGP PUBLIC KEY BLOCK-----<br>
+            Version: GnuPG v2<br>
+            <br>
+            mQENBFZcoP8BCACzAxpgUKr9IkGzG5HFcvu1aT2IzAEQvxppaXOSkKNZh02UufYP<br>
+            K+Lyfjv1xtPXSVYQQaacN5jxL4MDz+dnL+DONsP5ODA9/qeonM2ZaqQ+ULD6j6LB<br>
+            I52BaXzHMP/I6Xq1K+PGIwGYkZs8ws29lv7mTYiREyqHaq135Lq//EuQzwSp8yI8<br>
+            mIBXQdyX0GiLFSIg0eFMR9Tu3109rIIuOXOqRExC2EGBr0KMHrfNGo8+ZkTDURzN<br>
+            tn1k6GAGZfwRorOwghmPERLzJHOi1DnbjQ5fKnSwufpz1w8xstSR4Vp3HgrXZSf/<br>
+            PoasjwXel4Q3PU6ht+TmnzSkG42OhTexddhRABEBAAG0GVJ5YW4gVGVzdCA8Unlh<br>
+            bkB0ZXN0LmNvbT6JATkEEwEIACMFAlZcoP8CGwMHCwkIBwMCAQYVCAIJCgsEFgID<br>
+            AQIeAQIXgAAKCRBNhIYJ+TiEBUs7CACJQLeb+j0Fa8iz2RgfrgKEbisigHoFe4aq<br>
+            9zaTEdKMhXY2covN+kqByGWnLitu1SFKZWnUtNPTcnWJD4xXYgXZa1ysFBWaueUV<br>
+            EHE+Pma4NEcxfZA4Dik1IcVTAg5ClFDH4VFT1gM/Mpl2tdjGvc78S4w7yRmEx4zX<br>
+            harfRqoppLw0QjnZss+72o/B9Z1zQlpMEuxk5Z539jEq27+H/xB6PpTFWfys3nrE<br>
+            0zECrWRF4nbnn9Z7z7wBCsj3iGTBLuEPll+o3AfcT6VvV0daGQcm6lBRf+jP7VQ/<br>
+            Py6jCK2I3BDdTYe3DdsIFYxsODJfRfbQXYqNiBOWQwVwceTp/1/guQENBFZcoP8B<br>
+            CADOjrPvWAEuuY/LLyLCUYsFOscu5s7IQXlXiYlSJ6u9j3YGVZ7pI5mQOe8invfV<br>
+            t8gQKJlOMOBjYJQKf9Z8N22XAtFlSHY3JWWoe/YCoEkM1KbYaWn+lOvsxufism4g<br>
+            zOCUtxGT/xZbJnBrBfXh7MAXDeJl2gKoy7JG9wMhcfhOc6IUPlL18mwwWvLDzMCD<br>
+            Z5yFxGKi1d8fYXJ5pjWtRVhPn23jifiqeAUbdYRTvsMPuhxXgoHZFG8cGturTy/J<br>
+            MGRcJndAu0NSrUhUOGFBt3AZiPmmrNu2i4uy0JH+Ib7z+9E6XP2n9Ri1g9xriCI2<br>
+            0LKb6wPAPQ5oVqOgf969ghyPABEBAAGJAR8EGAEIAAkFAlZcoP8CGwwACgkQTYSG<br>
+            Cfk4hAVdSwf9Hi8SueqEd26QUA8k04jhqJMtUGdOb0XmvPSgEJJsLfndu/RyznFN<br>
+            02DA4L9b6Byp8TSTR6wL07H6z9xKS/DFxsBLXfQ6BqJRN8f8ACyverka2jiqk3fl<br>
+            S1dm4YhkHk7A3XOb5lU8vFz93jUo+V4PgfjahTNkbCc9g1IqjP2c7QBhfYRMFo9L<br>
+            hU1ZqQ2Kf8R3YMOoIZFBsH0DAUyNXUbk2Qk2HgtojDk5zC9VLi362UAz9cQZ1B1a<br>
+            mc5fnCGUVsYEGV4m4IJxbW/BMDC3v2DFmwvHHOqwIMRXZcbUtvKipT2raqKTHtU1<br>
+            g2Vb27pwo315r7lo8lml14YcQ1MtDDSRpg==<br>
+            =iCTT<br>
+            -----END PGP PUBLIC KEY BLOCK-----<br><br>
+
+            <input size=100 name="pkey"><br>
+
+            Type of public key: <select size=1 name="pktype"><option value='RSA'>RSA</option></select><br>
+            Key ID (figured out from public key): <input size=40 name="keyid"><br>
+
+            Message for encryption:<br>
+            <textarea name="msg" rows=16 cols=80>Message to be encrypted goes here.</textarea><br>
+            <input type=submit value="Encrypt">
+
+          </form>
+
+      </ui-view>
+    </div>
+
+  </div>
+</body>
+</html>
