@@ -24,7 +24,9 @@ w\:* {behavior:url(#default#VML);}
 <link rel=colorSchemeMapping href="SRS_files/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
-  <w:Zoom>90</w:Zoom>
+  <w:Zoom>85</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
   <w:TrackMoves>false</w:TrackMoves>
   <w:TrackFormatting/>
   <w:ValidateAgainstSchemas/>
@@ -665,8 +667,7 @@ a:visited, span.MsoHyperlinkFollowed
 	text-decoration:underline;
 	text-underline:single;}
 p
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
+	{mso-style-priority:99;
 	mso-margin-top-alt:auto;
 	margin-right:0in;
 	mso-margin-bottom-alt:auto;
@@ -743,6 +744,12 @@ p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxS
 	font-family:"Times New Roman","serif";
 	mso-fareast-font-family:"Times New Roman";
 	mso-fareast-theme-font:minor-fareast;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -1477,7 +1484,7 @@ Email</span></b><b><span style='font-size:18.0pt'><o:p></o:p></span></b></p>
 Requirements Specification</span></b></p>
 
 <p align=center style='text-align:center'><b><span style='font-size:10.0pt'>COP4331,
-Fall 2015</span></b></p>
+<span class=GramE>Fall</span> 2015</span></b></p>
 
 <p align=center style='text-align:center'>&nbsp;</p>
 
@@ -1563,8 +1570,8 @@ Fall 2015</span></b></p>
      achatham@knights.ucf.edu <o:p></o:p></span></li>
  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
      mso-list:l3 level1 lfo1;tab-stops:list .5in'><span style='font-size:10.0pt;
-     mso-fareast-font-family:"Times New Roman"'>Thomas Tavarez |
-     peepq@knights.ucf.edu <o:p></o:p></span></li>
+     mso-fareast-font-family:"Times New Roman"'>Thomas <span class=SpellE>Tavarez</span>
+     | peepq@knights.ucf.edu <o:p></o:p></span></li>
  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
      mso-list:l3 level1 lfo1;tab-stops:list .5in'><span style='font-size:10.0pt;
      mso-fareast-font-family:"Times New Roman"'>David Clapp | davidclapp@knights.ucf.edu
@@ -1575,11 +1582,15 @@ Fall 2015</span></b></p>
 
 <div>
 
+<div>
+
 <div class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>
 
 <hr size=2 width="90%" align=left>
 
 </span></div>
+
+</div>
 
 </div>
 
@@ -1711,16 +1722,22 @@ style='mso-fareast-font-family:"Times New Roman"'>
 style='font-size:10.0pt'><o:p></o:p></span></p>
 
 <p><a name=SoftwareToBeProduced><u><span style='font-size:10.0pt'>Software to
-be Produced:</span></u></a><u><span style='font-size:10.0pt'><o:p></o:p></span></u></p>
+be </span></u></a><span class=GramE><span style='mso-bookmark:SoftwareToBeProduced'><u><span
+style='font-size:10.0pt'>Produced</span></u></span></span><span
+style='mso-bookmark:SoftwareToBeProduced'><u><span style='font-size:10.0pt'>:</span></u></span><u><span
+style='font-size:10.0pt'><o:p></o:p></span></u></p>
 
 <p><a name=ReferenceDocuments><span style='font-size:10.0pt;mso-bidi-font-size:
-12.0pt;color:black'>The current system design is an encrypted email system through
-a web browser based interface. Messages will be encrypted end-to-end so that
-they can only be read by the designated receiver.<span
-style='mso-spacerun:yes'>  </span>Users will be able to log in and out securly.
-They will also be able to send andreceive messages, organize their messages,
-mark them as spam, and manage their address book.<span
-style='mso-spacerun:yes'>  </span><o:p></o:p></span></a></p>
+12.0pt;color:black'>The current system design is an encrypted email system
+through a web browser based interface. Messages will be encrypted end-to-end so
+that they can only be read by the designated receiver.<span
+style='mso-spacerun:yes'>  </span>Users will be able to log in and out </span></a><span
+class=SpellE><span style='mso-bookmark:ReferenceDocuments'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;color:black'>securly</span></span></span><span
+style='mso-bookmark:ReferenceDocuments'><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;color:black'>. They will also be able to send <span
+class=SpellE>andreceive</span> messages, organize their messages, mark them as
+spam, and manage their address book.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></span></p>
 
 <p><span style='mso-bookmark:ReferenceDocuments'><u><span style='font-size:
 10.0pt'>Reference Documents:</span></u></span><u><span style='font-size:10.0pt'><o:p></o:p></span></u></p>
@@ -1854,7 +1871,7 @@ Table</span></u></span><u><span style='font-size:10.0pt'>:<o:p></o:p></span></u>
  5.25pt 5.25pt 5.25pt 5.25pt;mso-border-insideh:.5pt solid windowtext;
  mso-border-insidev:.5pt solid windowtext'>
  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
+  <td width="21%" valign=top style='width:21.7%;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Event Name</span></p>
   </td>
@@ -1872,7 +1889,7 @@ Table</span></u></span><u><span style='font-size:10.0pt'>:<o:p></o:p></span></u>
   </td>
  </tr>
  <tr style='mso-yfti-irow:1'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
+  <td width="21%" valign=top style='width:21.7%;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Log In</span></p>
   </td>
@@ -1890,7 +1907,7 @@ Table</span></u></span><u><span style='font-size:10.0pt'>:<o:p></o:p></span></u>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
+  <td width="21%" valign=top style='width:21.7%;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Log Out</span></p>
   </td>
@@ -1908,7 +1925,7 @@ Table</span></u></span><u><span style='font-size:10.0pt'>:<o:p></o:p></span></u>
   </td>
  </tr>
  <tr style='mso-yfti-irow:3'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
+  <td width="21%" valign=top style='width:21.7%;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Create Account</span></p>
   </td>
@@ -1926,7 +1943,7 @@ Table</span></u></span><u><span style='font-size:10.0pt'>:<o:p></o:p></span></u>
   </td>
  </tr>
  <tr style='mso-yfti-irow:4'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
+  <td width="21%" valign=top style='width:21.7%;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Compose Email<o:p></o:p></span></p>
   </td>
@@ -1944,43 +1961,7 @@ Table</span></u></span><u><span style='font-size:10.0pt'>:<o:p></o:p></span></u>
   </td>
  </tr>
  <tr style='mso-yfti-irow:5'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Save Draft<o:p></o:p></span></p>
-  </td>
-  <td width="19%" valign=top style='width:19.9%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p class=MsoNormal><span style='font-size:10.0pt'>Mouse Click on Button</span></p>
-  </td>
-  <td width="35%" valign=top style='width:35.06%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Toast message “Saved Draft”<o:p></o:p></span></p>
-  </td>
-  <td width="22%" valign=top style='width:22.74%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Message saved<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:6'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Edit Draft<o:p></o:p></span></p>
-  </td>
-  <td width="19%" valign=top style='width:19.9%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p class=MsoNormal><span style='font-size:10.0pt'>Mouse Click on Button</span></p>
-  </td>
-  <td width="35%" valign=top style='width:35.06%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Draft opened<o:p></o:p></span></p>
-  </td>
-  <td width="22%" valign=top style='width:22.74%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Message opened<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:7'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
+  <td width="21%" valign=top style='width:21.7%;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Send Message<o:p></o:p></span></p>
   </td>
@@ -1997,8 +1978,8 @@ Table</span></u></span><u><span style='font-size:10.0pt'>:<o:p></o:p></span></u>
   <p><span style='font-size:10.0pt'>Message sent to server<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:8'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
+ <tr style='mso-yfti-irow:6'>
+  <td width="21%" valign=top style='width:21.7%;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>View Message<o:p></o:p></span></p>
   </td>
@@ -2015,44 +1996,8 @@ Table</span></u></span><u><span style='font-size:10.0pt'>:<o:p></o:p></span></u>
   <p><span style='font-size:10.0pt'>Message opened<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:9'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Sort Mail<o:p></o:p></span></p>
-  </td>
-  <td width="19%" valign=top style='width:19.9%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p class=MsoNormal><span style='font-size:10.0pt'>Mouse Click on Button</span></p>
-  </td>
-  <td width="35%" valign=top style='width:35.06%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Messages sorted in inbox<o:p></o:p></span></p>
-  </td>
-  <td width="22%" valign=top style='width:22.74%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Messages sorted<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:10'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Mark as Read<o:p></o:p></span></p>
-  </td>
-  <td width="19%" valign=top style='width:19.9%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p class=MsoNormal><span style='font-size:10.0pt'>Mouse Click on Button</span></p>
-  </td>
-  <td width="35%" valign=top style='width:35.06%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Message marked as read<o:p></o:p></span></p>
-  </td>
-  <td width="22%" valign=top style='width:22.74%;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Message marked as read<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:11'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
+ <tr style='mso-yfti-irow:7'>
+  <td width="21%" valign=top style='width:21.7%;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Reply<o:p></o:p></span></p>
   </td>
@@ -2069,8 +2014,8 @@ Table</span></u></span><u><span style='font-size:10.0pt'>:<o:p></o:p></span></u>
   <p><span style='font-size:10.0pt'>New message created<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:12'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
+ <tr style='mso-yfti-irow:8'>
+  <td width="21%" valign=top style='width:21.7%;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>View Profile<o:p></o:p></span></p>
   </td>
@@ -2087,8 +2032,8 @@ Table</span></u></span><u><span style='font-size:10.0pt'>:<o:p></o:p></span></u>
   <p><span style='font-size:10.0pt'>Profile page displayed<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:13'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
+ <tr style='mso-yfti-irow:9'>
+  <td width="21%" valign=top style='width:21.7%;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Edit Profile<o:p></o:p></span></p>
   </td>
@@ -2105,8 +2050,8 @@ Table</span></u></span><u><span style='font-size:10.0pt'>:<o:p></o:p></span></u>
   <p><span style='font-size:10.0pt'>Profile edited <o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:14'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
+ <tr style='mso-yfti-irow:10'>
+  <td width="21%" valign=top style='width:21.7%;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>View Contacts<o:p></o:p></span></p>
   </td>
@@ -2123,8 +2068,8 @@ Table</span></u></span><u><span style='font-size:10.0pt'>:<o:p></o:p></span></u>
   <p><span style='font-size:10.0pt'>Contacts page displayed<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:15;mso-yfti-lastrow:yes'>
-  <td width="21%" valign=top style='width:21.72%;border:solid windowtext 1.0pt;
+ <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+  <td width="21%" valign=top style='width:21.7%;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Edit Contact<o:p></o:p></span></p>
   </td>
@@ -2313,7 +2258,7 @@ style='font-size:10.0pt'>:</span></span><span style='font-size:10.0pt'><o:p></o:
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Statement: The Web Application shall be
-  able to send and receive electronic messages between system users</span></p>
+  able to send and receive electronic messages between system users.</span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -2373,7 +2318,7 @@ style='font-size:10.0pt'>:</span></span><span style='font-size:10.0pt'><o:p></o:
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Statement: The Web Application shall be
-  able to sort received emails</span></p>
+  able to sort received emails by most recently received.</span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -2434,7 +2379,7 @@ style='font-size:10.0pt'>:</span></span><span style='font-size:10.0pt'><o:p></o:
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Statement: Users shall be able to create
-  account which they will be able to log in and out of the system</span></p>
+  account which they will be able to log in and out of the system.</span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -2614,8 +2559,8 @@ style='font-size:10.0pt'><o:p></o:p></span></u></p>
  <tr style='mso-yfti-irow:7;mso-yfti-lastrow:yes'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Revision History: Created 10-08-2015 by
-  David Clapp</span></p>
+  <p><span style='font-size:10.0pt'>Revision History: Created 10-08-2015 by David
+  Clapp</span></p>
   </td>
  </tr>
 </table>
@@ -2979,8 +2924,8 @@ Data Requirements:</span></u></span><u><span style='font-size:10.0pt'><o:p></o:p
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='mso-bookmark:SecurityRequirements'><span style='font-size:
-  10.0pt'>Statement: Team members shall be able to program on Linux or in browser
-  languages</span></span></p>
+  10.0pt'>Statement: Team members shall be able to program on Linux or in
+  browser languages</span></span></p>
   </td>
   <span style='mso-bookmark:SecurityRequirements'></span>
  </tr>
@@ -3056,9 +3001,9 @@ Data Requirements:</span></u></span><u><span style='font-size:10.0pt'><o:p></o:p
  <tr style='mso-yfti-irow:1'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:5.25pt 5.25pt 5.25pt 5.25pt'>
-  <p><span style='font-size:10.0pt'>Statement: Messages shall only be
-  accessible by accounts that the message was sent. Only the users directly
-  involved in the message shall be able to decrypt and read message.</span></p>
+  <p><span style='font-size:10.0pt'>Statement: Messages shall only be accessible
+  by accounts that the message was sent. Only the users directly involved in
+  the message shall be able to decrypt and read message.</span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -3118,8 +3063,8 @@ Data Requirements:</span></u></span><u><span style='font-size:10.0pt'><o:p></o:p
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Statement: All messages will be sent over
-  encrypted network using Private Public Key encryption. All public keys will
-  be stored on server.</span></p>
+  encrypted network using PGP encryption. All public keys will be stored on
+  server.</span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -3182,8 +3127,8 @@ Quality Assurance Requirements:</span></u></a><u><span style='font-size:10.0pt'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:5.25pt 5.25pt 5.25pt 5.25pt'>
   <p><span style='font-size:10.0pt'>Statement: Client-side interface shall run
-  on current generation web browsers including FireFox, Chrome, Safari, and
-  Internet Explorer using HTML5.</span></p>
+  on current generation web browsers including <span class=SpellE>FireFox</span>,
+  Chrome, Safari, and Internet Explorer using HTML5.</span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
