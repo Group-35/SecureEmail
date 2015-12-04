@@ -1,0 +1,7 @@
+To build the project you will need a linux operating system. 
+Once you have that install Ruby (version 2.2 or higher) and Rails 4.2. Afterwards get the project and run these commands:
+
+rake db:migrate
+rails s
+
+That should build the database and run the server locally. Alternatively you can go to https://salty-depths-8905.herokuapp.com to view the site online.
